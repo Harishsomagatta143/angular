@@ -1,0 +1,80 @@
+<table border="1">
+    <tr>
+        <th>Saloon Id</th>
+        <th>Saloon Name</th>
+        <th>Saloon Phonenumber</th>
+        <th>Address Id</th>
+        <th>Address City</th>
+        <th>Address State</th>
+        <th>Address Postalcode</th>
+        <th>Customer Id</th>
+        <th>Customer Name</th>
+        <th>Address Email</th>
+        <th>Address Mobilenumber</th>
+    </tr>
+    <tr *ngFor="let sal of saloons">
+        <td>{{sal.id}}</td>
+        <td>{{sal.name}}</td>
+        <td>{{sal.phoneNumber}}</td>
+        <td>{{sal.address.id}}</td>
+        <td>{{sal.address.city}}</td>
+        <td>{{sal.address.state}}</td>
+        <td>{{sal.address.postalcode}}</td>
+        <td>{{sal.customer.id}}</td>
+        <td>{{sal.customer.name}}</td>
+        <td>{{sal.customer.email}}</td>
+        <td>{{sal.customer.mobileNumber}}</td>
+        
+
+    </tr>
+</table>
+<h2>Add Saloon</h2>
+<table>
+    <tr>
+        <td>Saloon Id</td>
+        <td><input type="text" [(ngModel)]="model.id"/></td>
+    </tr>
+    <tr>
+        <td>Saloon Name</td>
+        <td><input type="text" [(ngModel)]="model.name"/></td>
+    </tr>
+    <tr>
+        <td>Saloon Phonenumber</td>
+        <td><input type="text" [(ngModel)]="model.phoneNumber"/></td>
+    </tr>
+   
+    <tr>
+        <td>Address Id</td>
+        <td><input type="text" [(ngModel)]="model.addressid"/></td>
+    </tr>
+    <tr>
+        <td>Address City</td>
+        <td><input type="text" [(ngModel)]="model.addresscity"/></td>
+    </tr>
+    <tr>
+        <td>Address State</td>
+        <td><input type="text" [(ngModel)]="model.addressstate"/></td>
+    </tr>
+    <tr>
+        <td>Address Postalcode</td>
+        <td><input type="text" [(ngModel)]="model.addresspostalcode"/></td>
+    </tr>
+    <tr>
+        <td>Customer Id</td>
+        <td><input type="text" [(ngModel)]="model.customerid"/></td>
+    </tr>
+    <tr>
+        <td>Customer Name</td>
+        <td><input type="text" [(ngModel)]="model.customername"/></td>
+    </tr>
+    <tr>
+        <td>Customer Email</td>
+        <td><input type="text" [(ngModel)]="model.customeremail"/></td>
+    </tr>
+    <tr>
+        <td>Customer Mobilenumber</td>
+        <td><input type="text" [(ngModel)]="model.customermobileNumber"/></td>
+    
+        <input type="button" value="Add Saloon" (click)="addSaloon()"/>
+    </tr>
+</table>
